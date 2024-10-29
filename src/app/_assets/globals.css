@@ -1,0 +1,11 @@
+body {
+  background: var(--tg-theme-secondary-bg-color, white);
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
