@@ -1,0 +1,20 @@
+section.paymentWithId {
+    padding: 30px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+section.paymentWithId p {
+    margin-bottom: 50px;
+}
+
+section.paymentWithId button {
+    width: 100%;
+}
+
+section.paymentWithId p.payEnd {
+    color: #a5ffa5;
+}

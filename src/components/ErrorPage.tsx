@@ -14,13 +14,13 @@ export function ErrorPage({
 
   return (
     <div>
-      <h2>An unhandled error occurred!</h2>
+      <h2>Извините, произошла ошибка!</h2>
       <blockquote>
         <code>
           {error.message}
         </code>
       </blockquote>
-      {reset && <button onClick={() => reset()}>Try again</button>}
+      {reset && <button onClick={() => reset()}>Попробовать снова</button>}
     </div>
   );
 }
