@@ -10,58 +10,54 @@ import { Page } from '@/components/Page';
 import tonSvg from './_assets/ton.svg';
 
 export default function Home() {
-  const t = useTranslations('i18n');
+	const t = useTranslations('i18n');
 
-  return (
-    <Page back={false}>
-      <List>
-        <Section
-          header="Features"
-          footer="You can use these pages to learn more about features, provided by Telegram Mini Apps and other useful projects"
-        >
-          <Link href="/ton-connect">
-            <Cell
-              before={
-                <Image
-                  src={tonSvg.src}
-                  style={{ backgroundColor: '#007AFF' }}
-                />
-              }
-              subtitle="Connect your TON wallet"
-            >
-              TON Connect
-            </Cell>
-          </Link>
-        </Section>
-        <Section
-          header="Application Launch Data"
-          footer="These pages help developer to learn more about current launch information"
-        >
-          <Link href="/init-data">
-            <Cell subtitle="User data, chat information, technical data">
-              Init Data
-            </Cell>
-          </Link>
-          <Link href="/launch-params">
-            <Cell subtitle="Platform identifier, Mini Apps version, etc.">
-              Launch Parameters
-            </Cell>
-          </Link>
-          <Link href="/theme-params">
-            <Cell subtitle="Telegram application palette information">
-              Theme Parameters
-            </Cell>
-          </Link>
-          <Link href="/test">
-            <Cell subtitle="My page for test">
-              Test
-            </Cell>
-          </Link>
-        </Section>
-        <Section header={t('header')} footer={t('footer')}>
-          <LocaleSwitcher/>
-        </Section>
-      </List>
-    </Page>
-  );
+	return (
+		<Page back={false}>
+			<List>
+				<Section>
+					<Link href="/ton-connect">
+						<Cell
+							before={
+								<Image
+									src={tonSvg.src}
+									style={{backgroundColor: '#007AFF'}}
+								/>
+							}
+							subtitle="Приложение для ваших сборов"
+						>
+							Assembly
+						</Cell>
+					</Link>
+				</Section>
+				<Section
+					header="Доступные разделы"
+				>
+					<Link href="/group">
+						<Cell subtitle="Группы пользователя, где проводятся сборы">
+							Группы
+						</Cell>
+					</Link>
+					<Link href="/profile">
+						<Cell subtitle="Данные о профиле с переопределением ">
+							Профиль
+						</Cell>
+					</Link>
+					<Link href="/settings">
+						<Cell subtitle="Настройки уведомлений и пр.">
+							Настройки
+						</Cell>
+					</Link>
+					<Link href="/about">
+						<Cell subtitle="О нашем приложении">
+							Информация
+						</Cell>
+					</Link>
+				</Section>
+				{/*<Section header={t('header')} footer={t('footer')}>*/}
+				{/*	<LocaleSwitcher/>*/}
+				{/*</Section>*/}
+			</List>
+		</Page>
+	);
 }
